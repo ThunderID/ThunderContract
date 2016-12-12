@@ -25,6 +25,6 @@ Kiriman data akan menyesuaikan dari halaman/request. Adapun Contract Page data a
 
 #### Contract
 
-1. [Page Create]()
+1. [Page Create](https://github.com/ThunderID/ThunderContract/blob/master/Backend/create.mdown)
 2. [Page Index]()
 3. [Page Show]()
