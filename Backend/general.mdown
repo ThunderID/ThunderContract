@@ -120,3 +120,6 @@ KETERANGAN :
 		]
 	]
 	
+#### Catatan
+
+	Data yang dikirimkan akan mengikuti format Jsend. Contoh diatas menggunakan format array hanya untuk memudahkan pembacaan data saja.
