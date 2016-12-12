@@ -15,13 +15,12 @@ KETERANGAN:
 
 1. Data Group : digunakan untuk mengelompokkan data (misal: kelompok data Kontak didalamnya terdapat berbagai macam data dari field telepon, email, dan alamat)
 2. Header : digunakan untuk mendaftarkan data dari field apa yang akan ditampilkan
-3. Data : array data dengan format sebagai berikut
-  
-	   [
-	    INDEX =>  [
-			NAMA FIELD => value,
-			NAMA FIELD => value,
-			dst....
-		      ]
-	   ]
+3. Data : array data dengan format sebagai berikut:
 
+		[
+			INDEX =>  [
+				NAMA FIELD => value,
+				NAMA FIELD => value,
+				dst....
+			]
+		]
