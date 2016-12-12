@@ -23,6 +23,7 @@ Keterangan :
 
 ## Contract: Backend
 Contract untuk backend digunakan sebagai panduan menyusun (formatting) data yang dikirimkan ke UI sehingga data tersebut dapat diterjamahkan oleh Component. Pengiriman data yang tidak sesuai dengan kontrak akan menyebabkan data tidak ditampilkan dengan benar.
+
 [contract](https://github.com/ThunderID/ThunderContract/blob/master/Backend/general.mdown)
 
 ## Contract: Frontend
