@@ -21,7 +21,8 @@ Keterangan:
 
 ####Catatan:
 
-	Kiriman data akan menyesuaikan dari halaman/request. Adapun Contract Page data akan dibagi berdasarkan tipe page request yang diminta.
+	Kiriman data akan menyesuaikan dari halaman/request. 
+	Adapun Contract Page data akan dibagi berdasarkan tipe page request yang diminta.
 
 #### Contract
 
