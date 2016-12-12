@@ -1,5 +1,5 @@
 #Backend
-
+#### Deskripsi
 Contract ini digunakan sebagai format data yang akan dikirimkan dari API ke UI (dengan wrapper JSend format).
 
 	 response
@@ -13,9 +13,13 @@ Contract ini digunakan sebagai format data yang akan dikirimkan dari API ke UI (
 	Data 
 	 |_ Page Info
 	 |_ Page Data
-	 
+
+Keterangan:
+
 1. Page info : array yang berisi data mengenai informasi halaman.
 2. Page data : array yang berisi data hasil request yang diterima oleh API. 
+
+Catatan:
 
 Kiriman data akan menyesuaikan dari halaman/request. Adapun Contract Page data akan dibagi berdasarkan tipe page request yang diminta.
 
