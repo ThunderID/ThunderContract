@@ -98,7 +98,7 @@ KETERANGAN :
 FAQ :
 
 1. Apa semua data request create harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
-2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter diset dengan nilai null (KECUALI untuk nama field dan nama group). 
+2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter di-set dengan nilai null (KECUALI untuk nama field dan nama group). 
 
 #### Contoh Penggunaan :
 
