@@ -96,6 +96,7 @@ KETERANGAN :
 5. Untuk daftar element yang dapat digunakan, format parameter yang dikirimkan, serta penggunaan silahkan lihat Contract Element
 
 FAQ :
+
 1. Apa semua data request create harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
 2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter diset dengan nilai null (KECUALI untuk nama field dan nama group). 
 
@@ -160,6 +161,7 @@ FAQ :
 	]
 
 KETERANGAN
+
 1. Pada group input_profil, terdapat data element gender. Namun, karena tidak terdaftar di-header maka gender tidak akan ditampilkan meskipun dia memiliki validasi (property dari element)
 2. Pada group input_kontak, element phone tidak akan tertampil karena di header yang didaftarkan adalah 'Phone', sedangkan pada data element adalah 'phone' (baca: case sensitive)
 
