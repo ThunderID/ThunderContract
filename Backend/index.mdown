@@ -1,5 +1,5 @@
 ## Page Index
-Contract format data dari backend ke UI untuk requet halaman Create.
+Contract format data dari backend ke UI untuk requet halaman Index.
 
 #### Struktur Utuh Data
 
@@ -7,21 +7,21 @@ Contract format data dari backend ke UI untuk requet halaman Create.
 	 |_ Page Info
 	 |_ Page Data
 	     |_ Data Group
-           |_ Header
-		       |_ Data
+		 	 |_ Header
+		 	 |_ Data
 
 				 
 KETERANGAN:
 
 1. Data Group : digunakan untuk mengelompokkan data (misal: kelompok data Kontak didalamnya terdapat berbagai macam data dari field telepon, email, dan alamat)
 2. Header : digunakan untuk mendaftarkan data dari field apa yang akan ditampilkan
-3. Data : array data dengan format
+3. Data : array data dengan format sebagai berikut
   
-   [
-    INDEX =>  [
-                NAMA FIELD => value,
-                NAMA FIELD => value,
-                dst....
-              ]
-   ]
+	   [
+	    INDEX =>  [
+			NAMA FIELD => value,
+			NAMA FIELD => value,
+			dst....
+		      ]
+	   ]
 
