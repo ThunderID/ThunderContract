@@ -104,17 +104,17 @@ KETERANGAN :
 				'element_info' => [
 					'name' => ''
 				],
-			    	'element_data' => [
+				'element_data' => [
 				    	0   =>  [
-						"element-class" => "input"
-						"element-type" => "string"
-						"element-properties" => []
-					],
+							"element-class" => "input"
+							"element-type" => "string"
+							"element-properties" => []
+						],
 				    	1   =>  [
-						"element-class" => "input"
-						"element-type" => "string"
-						"element-properties" => []
-					 ]
+							"element-class" => "input"
+							"element-type" => "string"
+							"element-properties" => []
+						]
 				]
 			]  
 		]
