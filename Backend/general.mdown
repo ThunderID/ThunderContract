@@ -25,7 +25,7 @@ Contract format data dari backend ke UI untuk requet halaman Create.
 				 
 KETERANGAN:
 
-1. Page info : array yang berisi data mengenai informasi halaman (misal id)
+1. Page info : array yang berisi data mengenai informasi halaman.
 2. Page data : array yang berisi data hasil request yang diterima oleh API dalam bentuk kumpulan (group) dari beberapa element yang didalamnya merepresentasikan identitas dari data itu sendiri (misal: umur -> identitasnya bisa berupa tipe data number). Melalui element-element inilah nantinya UI akan menerjemahkannya ke html object berdasarkan identitas data tersebut.  
 3. Group of Element : digunakan untuk mengelompokkan element2 data (misal: Input Kontak didalamnya ada element form input telepon, email, dan alamat)
 4. Header : digunakan untuk mendaftarkan element untuk di tranformasi ke html object
@@ -91,35 +91,78 @@ KETERANGAN :
 
 1. Nama Group : bernilai string dari nama group input element. 
 2. Nama Field : bernilai string dari nama field data yang dikirimkan
+3. Untuk Nama Group dan Nama Field harus menggunakan Snake Text Format
+4. Pendaftaran element dengan mencantumkan nama dari element di-header bersifat Case Sensitive. Jadi jika element yang akan ditampilkan bernama 'umur' maka didalam header juga harus didaftarkan sebagai 'umur'.
+5. Untuk daftar element yang dapat digunakan, silahkan lihat Contract Element
 
+FAQ :
+1. Apa semua data request create harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
+2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter diset dengan nilai null (KECUALI untuk nama field dan nama group). 
 
 #### Contoh Penggunaan :
 
 	[
-		'page_info' => [
-			'id' =>'',
-		],
-		'page_data' => [
-			0 => [
-				'element_info' => [
-					'name' => ''
-				],
-				'element_data' => [
-				    	0   =>  [
-							"element-class" => "input"
-							"element-type" => "string"
-							"element-properties" => []
-						],
-				    	1   =>  [
-							"element-class" => "input"
-							"element-type" => "string"
-							"element-properties" => []
-						]
-				]
-			]  
-		]
+	    'page_info' => [
+	        'id' => null
+	    ],
+	    'page_data' => [
+	        'input_profil' => [
+	            'header'=> ['nama','umur']
+	            'data' => [
+	                'nama' => [
+	                    'element-class'      => 'input',
+	                    'element-type'       => 'string',
+	                    'element-properties' =>  [
+	                        'value'      => null,
+	                        'validation' => ['required' => true]
+	                    ]
+	                ],  
+	                'umur' => [
+	                    'element-class'      => 'input',
+	                    'element-type'       => 'number',
+	                    'element-properties' =>  [
+	                        'value'      => null,
+	                        'validation' => []
+	                    ]
+	                ], 
+	                'gender' => [
+	                    'element-class'      => 'input',
+	                    'element-type'       => 'select',
+	                    'element-properties' =>  [
+	                        'value'      => null,
+	                        'validation' => ['required' => true]
+	                    ]
+	                ],
+	            ]
+	        ],
+	        'input_kontak' => [
+	            'header'=> ['alamat', 'Phone']
+	            'data' => [
+	                'alamat' => [
+	                    'element-class'      => 'input',
+	                    'element-type'       => 'text',
+	                    'element-properties' =>  [
+	                        'value'      => null,
+	                        'validation' => []
+	                    ]
+	                ],  
+	                'phone' => [
+	                    'element-class'      => 'input',
+	                    'element-type'       => 'string',
+	                    'element-properties' =>  [
+	                        'value'      => null,
+	                        'validation' => []
+	                    ]
+	                ]
+	            ]
+	        ]
+	    ]
 	]
-	
+
+KETERANGAN
+1. Pada group input_profil, terdapat data element gender. Namun, karena tidak terdaftar di-header maka gender tidak akan ditampilkan meskipun dia memiliki validasi (property dari element)
+2. Pada group input_kontak, element phone tidak akan tertampil karena di header yang didaftarkan adalah 'Phone', sedangkan pada data element adalah 'phone' (baca: case sensitive)
+
 #### Catatan
 
 	Data yang dikirimkan akan mengikuti format Jsend. 
