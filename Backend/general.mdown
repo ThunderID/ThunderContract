@@ -26,7 +26,11 @@ Contract format data dari backend ke UI untuk requet halaman Create.
 KETERANGAN:
 
 1. Page info : array yang berisi data mengenai informasi halaman (misal id)
-2. Page data : array yang berisi data hasil request yang diterima oleh API. Data adalah kumpulan (group) dari beberapa element yang didalamnya merepresentasikan field data yang sesuai dengan kebutuhan API.
+2. Page data : array yang berisi data hasil request yang diterima oleh API dalam bentuk kumpulan (group) dari beberapa element yang didalamnya merepresentasikan identitas dari data itu sendiri (misal: umur -> identitasnya bisa berupa tipe data number). Melalui element-element inilah nantinya UI akan menerjemahkannya ke html object berdasarkan identitas data tersebut.  
+3. Group of Element : digunakan untuk mengelompokkan element2 data (misal: Input Kontak didalamnya ada element form input telepon, email, dan alamat)
+4. Header : digunakan untuk mendaftarkan element untuk di tranformasi ke html object
+5. Data : array dari element yang merepresentasikan data yang dikirimkan
+6. Element Description : deskripsi / identitas dari data element tersebut (Lihat Contract Element untuk daftar element yang tersedia)
 
 #### Format pengiriman data
 
@@ -87,3 +91,32 @@ KETERANGAN :
 
 1. Nama Group : bernilai string dari nama group input element. 
 2. Nama Field : bernilai string dari nama field data yang dikirimkan
+
+
+#### Contoh Penggunaan :
+
+	[
+		'page_info' => [
+			'id' =>'',
+		],
+		'page_data' => [
+			0 => [
+				'element_info' => [
+					'name' => ''
+				],
+			    	'element_data' => [
+				    	0   =>  [
+						"element-class" => "input"
+						"element-type" => "string"
+						"element-properties" => []
+					],
+				    	1   =>  [
+						"element-class" => "input"
+						"element-type" => "string"
+						"element-properties" => []
+					 ]
+				]
+			]  
+		]
+	]
+	
