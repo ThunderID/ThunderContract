@@ -60,6 +60,7 @@ a. class 'thunder_input' merupakan contoh multiple element binding
 
 b. pada property id, merupakan contoh single element binding
 
+
 ### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
 
 #### Policy
