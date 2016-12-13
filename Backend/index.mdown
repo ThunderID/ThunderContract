@@ -28,3 +28,102 @@ KETERANGAN:
 Note : Penulisan Data (A) tidak menggunakan (A). (A) digunakan hanya untuk menunjukkan parameter yang dimaksud		
 		
 #### Format pengiriman data
+
+	[
+	    'page_info' => [
+			'total_data'=> '' 	
+			'pagination' => [
+				'take' => '',
+				'current' => '',
+				'total_page' => ''
+			]
+	    ],
+	    'page_data' => [
+	        NAMA GROUP => [
+	            'header'=> array dari nama field yang akan ditampilkan
+	            'data' => [
+					INDEX =>  [
+						NAMA FIELD => value,
+						NAMA FIELD => value,
+						dst....
+					]
+	            ]
+	        ],
+	        NAMA GROUP => [
+	            'header'=> array dari nama field yang akan ditampilkan
+	            'data' => [
+					INDEX =>  [
+						NAMA FIELD => value,
+						NAMA FIELD => value,
+						dst....
+					]
+	            ]
+	        ],
+	        dst....	
+	    ]
+	]
+
+KETERANGAN :
+
+1. Nama Group : bernilai string dari nama group data. 
+2. INDEX : index dari data
+2. Nama Field : bernilai string dari nama field data yang dikirimkan
+3. Value : nilai data dari field
+
+FAQ :
+
+1. Apa semua data request create harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
+2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter di-set dengan nilai null (KECUALI untuk nama field dan nama group). 
+3. Untuk Nama Group harus menggunakan Snake Case Text Format
+4. Pendaftaran field pada header bersifat Case Sensitive. Jadi jika element yang akan ditampilkan bernama 'umur' maka didalam header juga harus didaftarkan sebagai 'umur'.
+
+#### Contoh Penggunaan
+
+	[
+	    'page_info' => [
+			'total_data'=> 150 	
+			'pagination' => [
+				'take' => 15,
+				'current' => 1,
+				'total_page' => 10
+			]
+	    ],
+	    'page_data' => [
+	        'data_karyawan' => [
+	            'header'=> ('nama','Umur','alamat')
+	            'data' => [
+					0 =>  [
+						'nama' => 'mr.x',
+						'umur' => 12,
+						'alamat' => 'jl. sokarta 12',
+					],
+					1 =>  [
+						'nama' => 'mr.Y',
+						'umur' => 21,
+						'alamat' => 'jl. sokarta 21',
+					],					
+	            ]
+	        ],
+	        'data_kantor' => [
+	            'header'=> ('nama','alamat')
+	            'data' => [
+					0 =>  [
+						'nama' => 'PT ABCD',
+						'alamat' => 'Jl. Merdeka 12',
+						'phone' => 1234123
+						
+					]
+	            ]
+	        ]
+	    ]
+	]
+
+KETERANGAN
+
+1. Pada group data_karyawan, data dari field umur tidak akan tertampil karena di header yang didaftarkan adalah 'Umur', sedangkan pada data element adalah 'umur' (baca: case sensitive)
+2. Pada group data_kantor, terdapat field umur. Namun, karena tidak terdaftar di-header maka gender tidak akan ditampilkan meskipun dia memiliki validasi (property dari element)
+
+#### Catatan
+
+	Data yang dikirimkan akan mengikuti format Jsend. 
+	Contoh diatas menggunakan format array hanya untuk memudahkan pembacaan data saja.
