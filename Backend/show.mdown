@@ -95,7 +95,7 @@ FAQ :
 		      					'item' => 'susu kaleng',
 		      					'qty' => 123,
 		      					'kuitansi' => '12312313'
-		    				]
+						]
 				]
 			]
 		]
