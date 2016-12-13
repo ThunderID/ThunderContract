@@ -27,6 +27,7 @@ KETERANGAN:
 		
 Note : Penulisan Data (A) tidak menggunakan (A). (A) digunakan hanya untuk menunjukkan parameter yang dimaksud		
 
+
 #### Format pengiriman data
 
 	[
@@ -70,8 +71,8 @@ FAQ :
 1. Apa semua data request index harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
 2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter di-set dengan nilai null (KECUALI untuk nama field & nama group). 
 3. Pendaftaran field pada header bersifat Case Sensitive. Jadi jika element yang akan ditampilkan bernama 'umur' maka didalam header juga harus didaftarkan sebagai 'umur'.
- 
- #### Contoh Penggunaan
+
+#### Contoh Penggunaan
 
 	    [
 		'page_info' => [
