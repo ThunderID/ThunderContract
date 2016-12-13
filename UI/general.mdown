@@ -65,18 +65,23 @@ b. pada property id, merupakan contoh single element binding
 #### Policy
 
 a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
+
 b. component harus mampu melakukan penyesuaian berdasarkan data kiriman. Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
+
 c. bila component berkaitan dengan Backend, harus ada dokumentasi serta Contract format data yang disepakati oleh UI & Backend
+
 d. semua data yang dikirimkan harus terlebih dahulu di cek (error/null handling)
+
 e. bila ada requirement data yang tidak terpenuhi, component harus menampilkan pesan error.
+
 f. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
 	
 #### Contoh:
 
-		//php
-		// dt_nama : menyimpan data nama. Diambil dari parameter $data['nama']
-		$dt_name = isset($dt_nama) ? $dt_nama : '';
+	//php
+	// dt_nama : menyimpan data nama. Diambil dari parameter $data['nama']
+	$dt_name = isset($dt_nama) ? $dt_nama : '';
 
-		//html
-		<input value="$dt_nama" id="{{ 'thunder_input_string_' . $dt_name .'_'. $dt_index }}"  class="form-control thunder_input {{ $ui_class }}
+	//html
+	<input value="$dt_nama" id="{{ 'thunder_input_string_' . $dt_name .'_'. $dt_index }}"  class="form-control thunder_input {{ $ui_class }}
 			
