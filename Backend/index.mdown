@@ -8,14 +8,14 @@ Contract format data dari backend ke UI untuk requet halaman Index.
 	 |_ Page Data
 	     |_ Data Group
 		 	 |_ Header
-		 	 |_ Data
+		 	 |_ Data (A)
 
 				 
 KETERANGAN:
 
 1. Data Group : digunakan untuk mengelompokkan data (misal: kelompok data Kontak didalamnya terdapat berbagai macam data dari field telepon, email, dan alamat)
 2. Header : digunakan untuk mendaftarkan data dari field apa yang akan ditampilkan
-3. Data : array data dengan format sebagai berikut:
+3. Data (A) : array data dengan format sebagai berikut:
 
 		[
 			INDEX =>  [
@@ -24,3 +24,7 @@ KETERANGAN:
 				dst....
 			]
 		]
+		
+Note : Penulisan Data (A) tidak menggunakan (A). (A) digunakan hanya untuk menunjukkan parameter yang dimaksud		
+		
+#### Format pengiriman data
