@@ -74,32 +74,32 @@ FAQ :
 
 #### Contoh Penggunaan
 
-	    [
+	[
 		'page_info' => [
-		'id'=> 12 	
+			'id'=> 12 	
 		],
 		'page_data' => [
-		    'data_customer'=> [
-			'header'=> ['nama','umur']
-			'data' => [
-		    0 =>  [
-		      'nama' => 'mr.x',
-		      'umur' => 12,
-		    ]
-			]
-		    ],
+			'data_customer'=> [
+				'header'=> ['nama','umur']
+				'data' => [
+						0 =>  [
+							'nama' => 'mr.x',
+							'umur' => 12,
+						]
+				]
+			],
 		    'data_penjualan' => [
-			'header'=> ['item','qty']
-			'data' => [
-		    0 =>  [
-		      'item' => 'susu kaleng',
-		      'qty' => 123,
-		      'kuitansi' => '12312313'
-		    ]
+				'header'=> ['item','qty']
+				'data' => [
+		   				 0 =>  [
+		      					'item' => 'susu kaleng',
+		      					'qty' => 123,
+		      					'kuitansi' => '12312313'
+		    				]
+				]
 			]
-		    ]
 		]
-	    ]
+	]
 
 KETERANGAN
 
