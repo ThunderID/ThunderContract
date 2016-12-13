@@ -1,0 +1,110 @@
+## Page Show
+Contract format data dari backend ke UI untuk requet halaman Show.
+
+#### Struktur Utuh Data
+
+	Data 
+	 |_ Page Info
+	 |_ Page Data
+	     |_ Data Group
+		 	 |_ Header
+		 	 |_ Data (A)
+
+				 
+KETERANGAN:
+
+1. Data Group : digunakan untuk mengelompokkan data (misal: kelompok data Kontak didalamnya terdapat berbagai macam data dari field telepon, email, dan alamat)
+2. Header : digunakan untuk mendaftarkan data dari field apa yang akan ditampilkan
+3. Data (A) : array data dengan format sebagai berikut:
+
+        [
+          INDEX => [
+            NAMA FIELD => value,
+            NAMA FIELD => value,
+            dst....
+          ]
+        ]
+		
+Note : Penulisan Data (A) tidak menggunakan (A). (A) digunakan hanya untuk menunjukkan parameter yang dimaksud		
+
+#### Format pengiriman data
+
+	[
+	    'page_info' => [
+			'id'=> '' 	
+	    ],
+	    'page_data' => [
+	        NAMA GROUP => [
+	            'header'=> array dari nama field yang akan ditampilkan
+	            'data' => [
+					INDEX =>  [
+						NAMA FIELD => value,
+						NAMA FIELD => value,
+						dst....
+					]
+	            ]
+	        ],
+	        NAMA GROUP => [
+	            'header'=> array dari nama field yang akan ditampilkan
+	            'data' => [
+					INDEX =>  [
+						NAMA FIELD => value,
+						NAMA FIELD => value,
+						dst....
+					]
+	            ]
+	        ],
+	        dst....	
+	    ]
+	]
+
+KETERANGAN :
+
+1. Nama Group : kumpulan data field
+1. INDEX : index dari data.
+2. Nama Field : bernilai string dari nama field data yang dikirimkan
+3. Value : nilai data dari field
+
+FAQ :
+
+1. Apa semua data request index harus mengikuti format diatas? Iya, karena ini adalah contract yang sudah disepakati.
+2. Bila ada parameter yang tidak dapat di-isi karena memang data yang diminta tidak tersedia? parameter di-set dengan nilai null (KECUALI untuk nama field & nama group). 
+3. Pendaftaran field pada header bersifat Case Sensitive. Jadi jika element yang akan ditampilkan bernama 'umur' maka didalam header juga harus didaftarkan sebagai 'umur'.
+ 
+ #### Contoh Penggunaan
+
+    [
+        'page_info' => [
+        'id'=> 12 	
+        ],
+        'page_data' => [
+            'data_customer'=> [
+                'header'=> ['nama','umur']
+                'data' => [
+            0 =>  [
+              'nama' => 'mr.x',
+              'umur' => 12,
+            ]
+                ]
+            ],
+            'data_penjualan' => [
+                'header'=> ['item','qty']
+                'data' => [
+            0 =>  [
+              'item' => 'susu kaleng',
+              'qty' => 123,
+              'kuitansi' => '12312313'
+            ]
+                ]
+            ]
+        ]
+    ]
+
+KETERANGAN
+
+1. Data dari field kuitansi tidak akan tertampil karena di header tidak didaftarkan.
+
+#### Catatan
+
+	Data yang dikirimkan akan mengikuti format Jsend. 
+	Contoh diatas menggunakan format array hanya untuk memudahkan pembacaan data saja.
