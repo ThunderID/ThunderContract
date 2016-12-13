@@ -45,9 +45,9 @@ Note : Penulisan Data (A) tidak menggunakan (A). (A) digunakan hanya untuk menun
 					NAMA FIELD => value,
 					NAMA FIELD => value,
 					dst....
-					]
+				]
 		    ]
-	   	 ]
+	  	]
 	]
 
 KETERANGAN :
