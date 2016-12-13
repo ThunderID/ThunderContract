@@ -31,7 +31,7 @@ Contract untuk backend digunakan sebagai panduan dalam pembuatan UI component/el
 
 [Contract](https://github.com/ThunderID/ThunderContract/blob/master/UI/general.mdown)
 
-Notes
+Notes:
 	Component dapat memiliki satu element atau juga beberapa element
 
 ## Contract: Element
