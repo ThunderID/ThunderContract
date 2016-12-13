@@ -29,7 +29,7 @@ Contract untuk backend digunakan sebagai panduan menyusun (formatting) data yang
 ## Contract: UI
 Contract untuk backend digunakan sebagai panduan dalam pembuatan UI component/element (pembacaan parameter dari APi yang diterima dan juga parameter yang digunakan untuk melakukan kustomisasi component/element).
 
-[Contract]()
+[Contract](https://github.com/ThunderID/ThunderContract/blob/master/UI/general.mdown)
 
 Notes
 	Component dapat memiliki satu element atau juga beberapa element
