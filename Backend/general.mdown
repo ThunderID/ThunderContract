@@ -27,5 +27,5 @@ Keterangan:
 #### Contract
 
 1. [Page Create](https://github.com/ThunderID/ThunderContract/blob/master/Backend/create.mdown)
-2. [Page Index]()
-3. [Page Show]()
+2. [Page Index](https://github.com/ThunderID/ThunderContract/blob/master/Backend/create.mdown)
+3. [Page Show](https://github.com/ThunderID/ThunderContract/blob/master/Backend/show.mdown)
