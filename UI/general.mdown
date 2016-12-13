@@ -45,33 +45,33 @@ h. untuk element wajib menyertakan nama id unik per element (untuk keperluan sin
 
 j. untuk element wajib menyertakan nama class unik per element (untuk keperluan multiple element binding)
 
-	Contoh:
+#### Contoh:
 
-		//php
-		// ui_class : menyimpan class untuk kostumasi element. Diambil dari parameter $style['class']
-		$ui_class 		= isset($style['class']) ? $style['class'] : '';
+	//php
+	// ui_class : menyimpan class untuk kostumasi element. Diambil dari parameter $style['class']
+	$ui_class 		= isset($style['class']) ? $style['class'] : '';
 
-		//html
-		<input id="{{ 'thunder_input_string_' . $dt_name .'_'. $dt_index }}"  class="form-control thunder_input {{ $ui_class }}
-		
-	Keterangan:
-	
-	a. class 'thunder_input' merupakan contoh multiple element binding
-	
-	b. pada property id, merupakan contoh single element binding
+	//html
+	<input id="{{ 'thunder_input_string_' . $dt_name .'_'. $dt_index }}"  class="form-control thunder_input {{ $ui_class }}
 
-2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
+Keterangan:
 
-	Policy
+a. class 'thunder_input' merupakan contoh multiple element binding
+
+b. pada property id, merupakan contoh single element binding
+
+### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
+
+#### Policy
+
+a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
+b. component harus mampu melakukan penyesuaian berdasarkan data kiriman. Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
+c. bila component berkaitan dengan Backend, harus ada dokumentasi serta Contract format data yang disepakati oleh UI & Backend
+d. semua data yang dikirimkan harus terlebih dahulu di cek (error/null handling)
+e. bila ada requirement data yang tidak terpenuhi, component harus menampilkan pesan error.
+f. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
 	
-	a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
-	b. component harus mampu melakukan penyesuaian berdasarkan data kiriman. Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
-	c. bila component berkaitan dengan Backend, harus ada dokumentasi serta Contract format data yang disepakati oleh UI & Backend
-	d. semua data yang dikirimkan harus terlebih dahulu di cek (error/null handling)
-	e. bila ada requirement data yang tidak terpenuhi, component harus menampilkan pesan error.
-	f. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
-	
-	Contoh:
+#### Contoh:
 
 		//php
 		// dt_nama : menyimpan data nama. Diambil dari parameter $data['nama']
