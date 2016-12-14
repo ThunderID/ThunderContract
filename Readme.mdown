@@ -27,19 +27,25 @@ Contract untuk backend digunakan sebagai panduan menyusun (formatting) data yang
 [Contract](https://github.com/ThunderID/ThunderContract/blob/master/Backend/general.mdown)
 
 ## Contract: UI
-Contract untuk backend digunakan sebagai panduan dalam pembuatan UI component/element (pembacaan parameter dari APi yang diterima dan juga parameter yang digunakan untuk melakukan kustomisasi component/element).
+Contract untuk backend digunakan sebagai panduan dalam pembuatan UI component (pembacaan parameter dari APi yang diterima dan juga parameter yang digunakan untuk melakukan kustomisasi component).
 
 [Contract](https://github.com/ThunderID/ThunderContract/blob/master/UI/general.mdown)
 
 Notes:
-	Component dapat memiliki satu element atau juga beberapa element
+	element : representasi dari markup yang dikirimkan API
+	component : adalah wadah dari satu atau beberapa element. Component juga dapat membantu untuk transformasi data 
 
 ## Contract: Element
-Contract ini berisi daftar element yang dapat digunakan dan dimengerti oleh baik Frontend dan juga backend.
+Contract ini berisi daftar element serta requirement dari element tersebut. Contract ini digunakan oleh API sebagai format pengiriman data(markup) serta digunakan UI(dalam pembuatan element)
+
+Contoh element adalah : input string (input dengan type string)
 
 [Contract]()
 
 ## Contract: Component
-Contract ini berisi daftar dari component yang dapat digunakan oleh Backend maupun Frontend (karena component tersusun dari element). Namun, penggunaan component lebih ditujukan untuk Frontend mengingat Frontend-lah yang bertanggung jawab mengenai tampilan UI, sedangkan backend tidak bertanggung jawab dengan tampilan yang ditayangkan ke browser.
+Contract ini berisi daftar dari component yang dapat digunakan oleh UI. Backend tidak perlu mengetahui element yang dikirimkan akan direpresentasikan dalam bentuk apa, oleh karena itu API tidak akan mengirimkan data component. Ui lah yang bertanggung jawab memilih component apa yang akan digunakan dalam merepresentasikan data element dari API 
+
+Contoh: 
+element input string dalam component bernama input_component
 
 [Contract]()
