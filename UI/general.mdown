@@ -66,7 +66,8 @@ b. pada property id, merupakan contoh single html element binding
 #### Contoh:
 
 	$data = [array of data]
-
+	
+#### Policy
 
 a. bila component berkaitan dengan Backend, harus mengikuti Contract format data yang disepakati oleh UI & Backend
 
