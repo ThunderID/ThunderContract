@@ -82,3 +82,4 @@ Contoh :
                 ])
 
 ## Daftar Component
+lihat dokumentasi [Thunder Component](https://github.com/ThunderID/ThunderComponents/blob/master/README.md)
