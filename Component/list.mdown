@@ -69,7 +69,7 @@ Format :
                         'data' => []
                      ],
                     'component_style'=>[],
-		    'component_debug'=>true or false
+		    	'component_debug'=>true or false
                 ])
 
 Contoh :
@@ -80,7 +80,7 @@ Contoh :
                         'data' => []
                      ],
                     'component_style'=>[],
-		    'component_debug'=>true
+		    	'component_debug'=>true
                 ])
 
 ## Daftar Component
