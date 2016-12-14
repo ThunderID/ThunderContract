@@ -24,13 +24,12 @@ Keterangan :
 
 #### Contoh Kiriman Data:
 	[
-      'component_data' => [
-          'header' => [array data header]
-          'data' => [array kiriman data ke element (berdasarkan dokumentasi component)]
-       ],
-       'component_style' => [array parameter UI (berdasarkan dokumentasi component)]
-	],
-	'component_debug' => true or false
+		'component_data' => [
+			'header' => [array data header]
+			'data' => [array kiriman data ke element (berdasarkan dokumentasi component)]
+		],
+		'component_style' => [array parameter UI (berdasarkan dokumentasi component)],
+		'component_debug' => true or false
 	]
 
 ## Policy
