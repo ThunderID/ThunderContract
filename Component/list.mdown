@@ -41,15 +41,14 @@ Untuk pembuatan component, gunakan format strukter folder sebagai berikut.
 
     component
       |_ Folder Component
-      |   |_ Module
+      |   |_ Module (jika dibutuhkan)
       |_ Component.blade
       
 Contoh :
 
     component
       |_ input_component
-      |   |_ Module
-      |       |_input_string.blade.php
+      |   |_ input_string.blade.php
       |_ input_component.blade.php
 
 ## Penggunaan
