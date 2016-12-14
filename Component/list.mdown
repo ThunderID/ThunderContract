@@ -1,0 +1,60 @@
+#Component
+
+Contract ini digunakan sebagai format data dalam component.
+
+## Contract
+
+#### Struktur
+      |_ component_data
+      |   |_ header
+      |   |_ data
+      |_ component_style
+
+Keterangan :
+
+1. Parameter yang dikirimkan kedalam component dikirim menggunakan array dengan parameter 'component_data' dan 'component_style' didalamnya
+2. data dalam variabel 'component_data' digunakan untuk menampung nilai data yang digunakan component
+3. data dalam variabel 'component_style' digunakan untuk menampung nilai data yang digunakan untuk keperluan UI
+
+#### Contoh Kiriman Data:
+	[
+      'component_data' => [
+          'header' => [array data header]
+          'data' => [array kiriman data ke element]
+       ],
+       'component_style' => [array parameter UI (berdasarkan dokumentasi component)]
+	]
+
+#### Keterangan
+
+a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
+
+b. component harus mampu melakukan penyesuaian berdasarkan data kiriman(header&data). Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
+
+c. pada component_style isi dan format bergantung pada requirement component dan dapat dilihat pada dokumentasi component.
+
+#### Directory
+
+Untuk pembuatan component, gunakan format strukter folder sebagai berikut.
+
+    component
+      |_ Folder Component
+      |   |_ Module
+      |_ Component.blade
+      
+Contoh :
+
+    component
+      |_ input_component
+      |   |_ Module
+      |       |_input_string.blade.php
+      |_ input_component.blade.php
+
+## Penggunaan
+       @include('components.NAMA COMPONENT', [
+                    'component_data' => [
+                        'header' => [],
+                        'data' => []
+                     ],
+                    'component_style'=>[]
+                ])
