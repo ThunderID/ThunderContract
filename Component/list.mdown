@@ -41,7 +41,7 @@ Untuk pembuatan component, gunakan format strukter folder sebagai berikut.
 
     component
       |_ Folder Component
-      	  |_ Component.blade.php (<- wajib menggunakan nama ini)
+      	  |_ Component.blade.php (wajib menggunakan nama ini)
           |_ Module (jika dibutuhkan)
       
 Contoh :
