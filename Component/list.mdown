@@ -31,7 +31,7 @@ a. hanya data dengan nama field yang ada di array header saja yang boleh ditampi
 
 b. component harus mampu melakukan penyesuaian berdasarkan data kiriman(header&data). Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
 
-c. pada component_style isi dan format bergantung pada requirement component dan dapat dilihat pada dokumentasi component.
+c. pada 'component_style' isi dan format bergantung pada requirement component dan dapat dilihat pada dokumentasi component.
 
 d. penamaan component menggunakan snake case text format
 
