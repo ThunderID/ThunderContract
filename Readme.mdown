@@ -41,7 +41,7 @@ Contract ini berisi daftar element serta requirement dari element tersebut. Cont
 
 Contoh element adalah : input string (input dengan type string)
 
-[Contract]()
+[Contract](https://github.com/ThunderID/ThunderContract/blob/master/Element/list.mdown)
 
 ## Contract: Component
 Contract ini berisi daftar dari component yang dapat digunakan oleh UI. Backend tidak perlu mengetahui element yang dikirimkan akan direpresentasikan dalam bentuk apa, oleh karena itu API tidak akan mengirimkan data component. Ui lah yang bertanggung jawab memilih component apa yang akan digunakan dalam merepresentasikan data element dari API 
@@ -49,4 +49,4 @@ Contract ini berisi daftar dari component yang dapat digunakan oleh UI. Backend 
 Contoh: 
 element input string dalam component bernama input_component
 
-[Contract]()
+[Contract](https://github.com/ThunderID/ThunderContract/blob/master/Component/list.mdown)
