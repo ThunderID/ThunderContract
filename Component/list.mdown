@@ -68,7 +68,8 @@ Format :
                         'header' => [],
                         'data' => []
                      ],
-                    'component_style'=>[]
+                    'component_style'=>[],
+		    'component_debug'=>true or false
                 ])
 
 Contoh :
@@ -78,7 +79,8 @@ Contoh :
                         'header' => [],
                         'data' => []
                      ],
-                    'component_style'=>[]
+                    'component_style'=>[],
+		    'component_debug'=>true
                 ])
 
 ## Daftar Component
