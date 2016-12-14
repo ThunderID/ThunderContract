@@ -7,9 +7,9 @@ Contract format data dari backend ke UI untuk requet halaman Create.
 	 |_ Page Info
 	 |_ Page Data
 	     |_ Group of Elements
-		 |_ Header
-		 |_ Data
-		     |_ Element Description
+		 	|_ Header
+		 	|_ Data
+		     	|_ Element Description
 				 
 KETERANGAN:
 
