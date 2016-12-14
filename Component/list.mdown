@@ -20,18 +20,20 @@ Keterangan :
 	[
       'component_data' => [
           'header' => [array data header]
-          'data' => [array kiriman data ke element]
+          'data' => [array kiriman data ke element (berdasarkan dokumentasi component)]
        ],
        'component_style' => [array parameter UI (berdasarkan dokumentasi component)]
 	]
 
-#### Keterangan
+## Policy
 
 a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
 
 b. component harus mampu melakukan penyesuaian berdasarkan data kiriman(header&data). Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
 
 c. pada component_style isi dan format bergantung pada requirement component dan dapat dilihat pada dokumentasi component.
+
+d. penamaan component menggunakan snake case text format
 
 #### Directory
 
@@ -51,6 +53,8 @@ Contoh :
       |_ input_component.blade.php
 
 ## Penggunaan
+
+Format :
        @include('components.NAMA COMPONENT', [
                     'component_data' => [
                         'header' => [],
@@ -58,3 +62,14 @@ Contoh :
                      ],
                     'component_style'=>[]
                 ])
+
+Contoh :
+       @include('components.form_inputs', [
+                    'component_data' => [
+                        'header' => [],
+                        'data' => []
+                     ],
+                    'component_style'=>[]
+                ])
+
+## Daftar Component
