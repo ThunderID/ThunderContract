@@ -63,25 +63,25 @@ Contoh :
 
 Format :
 
-       @include('components.NAMA FOLDER COMPONENT.component', [
-                    'component_data' => [
-                        'header' => [],
-                        'data' => []
-                     ],
-                    'component_style'=>[],
-		    	'component_debug'=>true or false
-                ])
+	@include('components.NAMA FOLDER COMPONENT.component', [
+		'component_data' => [
+			'header' => [],
+			'data' => []
+		],
+		'component_style'=>[],
+		'component_debug'=>true or false
+	])
 
 Contoh :
 
-       @include('components.input.component', [
-                    'component_data' => [
-                        'header' => [],
-                        'data' => []
-                     ],
-                    'component_style'=>[],
-		    	'component_debug'=>true
-                ])
+	@include('components.input.component', [
+		'component_data' => [
+				'header' => [],
+				'data' => []
+		],
+		'component_style'=>[],
+		'component_debug'=>true
+	])
 
 ## Daftar Component
 lihat dokumentasi [Thunder Component](https://github.com/ThunderID/ThunderComponents/blob/master/README.md)
