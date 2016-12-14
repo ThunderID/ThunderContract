@@ -61,33 +61,26 @@ a. class 'thunder_input' merupakan contoh multiple html element binding
 b. pada property id, merupakan contoh single html element binding
 
 
-### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
+### 2. Parameter yang dikirimkan kedalam element dikirimkan melalui variabel data
 
-#### Contoh Kiriman Data:
-	[
-		'header' => [array data header]
-		'data' => [array kiriman data ke element]
-	]
+#### Contoh:
 
-#### Policy
+	$data = [array of data]
 
-a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
 
-b. component harus mampu melakukan penyesuaian berdasarkan data kiriman. Bila ada penambahan data, maka seharusnya component akan secara langsung melakukan update.
+a. bila component berkaitan dengan Backend, harus mengikuti Contract format data yang disepakati oleh UI & Backend
 
-c. bila component berkaitan dengan Backend, harus ada dokumentasi serta Contract format data yang disepakati oleh UI & Backend
+b. semua data yang dikirimkan harus terlebih dahulu di cek (error/null handling)
 
-d. semua data yang dikirimkan harus terlebih dahulu di cek (error/null handling)
+c. bila ada requirement data yang tidak terpenuhi, component harus menampilkan pesan error.
 
-e. bila ada requirement data yang tidak terpenuhi, component harus menampilkan pesan error.
-
-f. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
+d. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
 	
 #### Contoh Penerapan dalam Element:
 
 	//php
 	// dt_nama : menyimpan data nama. Diambil dari parameter $data['nama']
-	$dt_name = isset($dt_nama) ? $dt_nama : '';
+	$dt_name = isset($data['name']) ? $data['name'] : '';
 
 	//html
 	<input value="$dt_nama" id="{{ 'thunder_input_string_' . $dt_name .'_'. $dt_index }}"  class="form-control thunder_input {{ $ui_class }}
