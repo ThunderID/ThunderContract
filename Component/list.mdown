@@ -4,7 +4,7 @@ Contract ini digunakan sebagai format data dalam component.
 
 ## Contract
 
-#### Struktur
+#### Struktur Data
       |_ component_data
       |   |_ header
       |   |_ data
@@ -41,15 +41,16 @@ Untuk pembuatan component, gunakan format strukter folder sebagai berikut.
 
     component
       |_ Folder Component
-      |   |_ Module (jika dibutuhkan)
-      |_ Component.blade
+      	  |_ Component.blade
+          |_ Module (jika dibutuhkan)
       
 Contoh :
 
     component
       |_ input_component
-      |   |_ input_string.blade.php
-      |_ input_component.blade.php
+		|_ module
+		|	|_ input_component.blade.php
+		|_ input_string.blade.php
 
 ## Penggunaan
 
