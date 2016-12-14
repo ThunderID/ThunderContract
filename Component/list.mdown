@@ -17,6 +17,7 @@ Keterangan :
 3. data dalam variabel 'component_style' digunakan untuk menampung nilai data yang digunakan untuk keperluan UI
 4. data paramter harus dicek terlebih dahulu (null/not setted data), dan tampilkan pesan error jika data yang ditampilkan kurang.
 5. punya nilai default untuk variabel-varaibel yang berhubungan dengan UI
+6. gunakan global component variabel 'component_error' untuk menampung pesan error jika terjadi kesalahan pemberian data/ketidaksesuaian format data.
 
 #### Contoh Kiriman Data:
 	[
