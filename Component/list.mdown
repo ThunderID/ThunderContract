@@ -41,22 +41,22 @@ Untuk pembuatan component, gunakan format strukter folder sebagai berikut.
 
     component
       |_ Folder Component
-      	  |_ Component.blade
+      	  |_ Component.blade.php (<- wajib menggunakan nama ini)
           |_ Module (jika dibutuhkan)
       
 Contoh :
 
     component
-      |_ input_component
+      |_ input
 		|_ module
-		|	|_ input_component.blade.php
-		|_ input_string.blade.php
+		|	|_ input_string.blade.php
+		|_ component.blade.php
 
 ## Penggunaan
 
 Format :
 
-       @include('components.NAMA COMPONENT', [
+       @include('components.NAMA FOLDER COMPONENT.component', [
                     'component_data' => [
                         'header' => [],
                         'data' => []
@@ -66,7 +66,7 @@ Format :
 
 Contoh :
 
-       @include('components.input_component', [
+       @include('components.input.component', [
                     'component_data' => [
                         'header' => [],
                         'data' => []
