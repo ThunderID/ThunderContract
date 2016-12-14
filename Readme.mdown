@@ -32,6 +32,7 @@ Contract untuk backend digunakan sebagai panduan dalam pembuatan UI component (p
 [Contract](https://github.com/ThunderID/ThunderContract/blob/master/UI/general.mdown)
 
 Notes:
+
 	element : representasi dari markup yang dikirimkan API
 	component : adalah wadah dari satu atau beberapa element. Component juga dapat membantu untuk transformasi data 
 
