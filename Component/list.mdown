@@ -55,6 +55,7 @@ Contoh :
 ## Penggunaan
 
 Format :
+
        @include('components.NAMA COMPONENT', [
                     'component_data' => [
                         'header' => [],
@@ -64,6 +65,7 @@ Format :
                 ])
 
 Contoh :
+
        @include('components.form_inputs', [
                     'component_data' => [
                         'header' => [],
