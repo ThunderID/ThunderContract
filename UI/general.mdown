@@ -1,6 +1,6 @@
 #UI
 
-Contract ini digunakan sebagai format data yang telah disepakati untuk formt paramter yang akan digunakan untuk pembuatan element. 
+Contract ini digunakan sebagai format data yang telah disepakati untuk formt paramter yang akan digunakan untuk pembuatan element/component. 
 
 ## Contract
 
@@ -8,11 +8,11 @@ Contract ini digunakan sebagai format data yang telah disepakati untuk formt par
 
 #### Contoh kasus:
 
-a. Penggunaan 1 parameter (misal: class) untuk modifikasi tampilan UI element tertentu, 
+a. Penggunaan 1 parameter (misal: class) untuk modifikasi tampilan UI element/component tertentu, 
 
 	$style['class'] => 'form-input'
 
-b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampilan UI element tertentu
+b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampilan UI element/component tertentu
 
 	$style => [
 		'class' => 'form-input',
@@ -23,27 +23,27 @@ b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampila
 
 a. class : slot untuk class css atau bahkan binding js
 
-b. visible : slot untuk tidak menampilkan element
+b. visible : slot untuk tidak menampilkan element/component
 
 #### Policy
 
-a. bebas untuk memberikan parameter-parameter sesuai dengan yang dibutuhkan oleh lement tersebut.
+a. bebas untuk memberikan parameter-parameter sesuai dengan yang dibutuhkan oleh element/component tersebut.
 
-b. setiap element haru memiliki dokumentasi dari kegunaan variabel, format parameter, serta cara penggunaan.
+b. setiap element/component harus memiliki dokumentasi dari kegunaan variabel, format parameter, serta cara penggunaan.
 
-c. setiap variabel harus memiliki nilai default bila tidak ada expected data yang dikirimkan.
+c. setiap variabel harus memiliki nilai default bila tidak ada data yang dikirimkan.
 
 d. harus dilakukan pengecekan apa variabel ada (error handling bila data yang di-inginkan tidak tersedia). Dapat digunakan metode isset() untuk cek.
 
 e. nilai parameter null berarti mengembalikan nilai default dari parameter tersebut.
 
-f. semua parameter yang dikirim dari luar component, divalidasi terlebih dahulu (poin d & e) lalu kemudian dimasukkan kedalam parameter dengan prefix 'ui_' Misal : 'ui_class'
+f. semua parameter yang dikirim dari luar element/component, divalidasi terlebih dahulu (poin d & e) lalu kemudian dimasukkan kedalam parameter dengan prefix 'ui_' Misal : 'ui_class'
 
 g. untuk keperluan penampilan kostumasi UI seluruhnya menggunakan variabel dengan prefix 'ui_'
 
-h. untuk element wajib menyertakan nama id unik per element (untuk keperluan single element binding)
+h. untuk element wajib menyertakan nama id unik per html element (untuk keperluan single element binding)
 
-j. untuk element wajib menyertakan nama class unik per element (untuk keperluan multiple element binding)
+j. untuk element wajib menyertakan nama class unik per html element (untuk keperluan multiple element binding)
 
 #### Contoh:
 
@@ -56,9 +56,9 @@ j. untuk element wajib menyertakan nama class unik per element (untuk keperluan 
 
 Keterangan:
 
-a. class 'thunder_input' merupakan contoh multiple element binding
+a. class 'thunder_input' merupakan contoh multiple html element binding
 
-b. pada property id, merupakan contoh single element binding
+b. pada property id, merupakan contoh single html element binding
 
 
 ### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
