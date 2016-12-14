@@ -45,7 +45,7 @@ h. untuk element wajib menyertakan nama id unik per html element (untuk keperlua
 
 j. untuk element wajib menyertakan nama class unik per html element (untuk keperluan multiple element binding)
 
-#### Contoh:
+#### Contoh Penerapan dalam Element:
 
 	//php
 	// ui_class : menyimpan class untuk kostumasi element. Diambil dari parameter $style['class']
@@ -63,7 +63,7 @@ b. pada property id, merupakan contoh single html element binding
 
 ### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
 
-#### Contoh:
+#### Contoh Kiriman Data:
 	[
 		'header' => [array data header]
 		'data' => [array kiriman data ke element]
@@ -83,7 +83,7 @@ e. bila ada requirement data yang tidak terpenuhi, component harus menampilkan p
 
 f. semua data yang sudah di cek dimasukkan dalam variabel dengan prefix '$dt_'
 	
-#### Contoh:
+#### Contoh Penerapan dalam Element:
 
 	//php
 	// dt_nama : menyimpan data nama. Diambil dari parameter $data['nama']
