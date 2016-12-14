@@ -1,6 +1,6 @@
 #UI
 
-Contract ini digunakan sebagai format data yang telah disepakati untuk formt paramter yang akan digunakan untuk pembuatan element/component. 
+Contract ini digunakan sebagai format data yang telah disepakati untuk format paramter yang akan digunakan untuk pembuatan element. 
 
 ## Contract
 
@@ -8,11 +8,11 @@ Contract ini digunakan sebagai format data yang telah disepakati untuk formt par
 
 #### Contoh kasus:
 
-a. Penggunaan 1 parameter (misal: class) untuk modifikasi tampilan UI element/component tertentu, 
+a. Penggunaan 1 parameter (misal: class) untuk modifikasi tampilan UI element tertentu, 
 
 	$style['class'] => 'form-input'
 
-b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampilan UI element/component tertentu
+b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampilan UI element tertentu
 
 	$style => [
 		'class' => 'form-input',
@@ -23,13 +23,13 @@ b. pengguna beberapa parameter (misal: class dan style) untuk modifikasi tampila
 
 a. class : slot untuk class css atau bahkan binding js
 
-b. visible : slot untuk tidak menampilkan element/component
+b. visible : slot untuk tidak menampilkan element
 
 #### Policy
 
-a. bebas untuk memberikan parameter-parameter sesuai dengan yang dibutuhkan oleh element/component tersebut.
+a. bebas untuk memberikan parameter-parameter sesuai dengan yang dibutuhkan oleh element tersebut.
 
-b. setiap element/component harus memiliki dokumentasi dari kegunaan variabel, format parameter, serta cara penggunaan.
+b. setiap element harus memiliki dokumentasi dari kegunaan variabel, format parameter, serta cara penggunaan.
 
 c. setiap variabel harus memiliki nilai default bila tidak ada data yang dikirimkan.
 
@@ -37,7 +37,7 @@ d. harus dilakukan pengecekan apa variabel ada (error handling bila data yang di
 
 e. nilai parameter null berarti mengembalikan nilai default dari parameter tersebut.
 
-f. semua parameter yang dikirim dari luar element/component, divalidasi terlebih dahulu (poin d & e) lalu kemudian dimasukkan kedalam parameter dengan prefix 'ui_' Misal : 'ui_class'
+f. semua parameter yang dikirim dari luar element, divalidasi terlebih dahulu (poin d & e) lalu kemudian dimasukkan kedalam parameter dengan prefix 'ui_' Misal : 'ui_class'
 
 g. untuk keperluan penampilan kostumasi UI seluruhnya menggunakan variabel dengan prefix 'ui_'
 
