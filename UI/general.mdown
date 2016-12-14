@@ -63,6 +63,12 @@ b. pada property id, merupakan contoh single html element binding
 
 ### 2. Parameter yang dikirimkan kedalam element untuk distribusi data dikirim menggunakan array dengan parameter 'header' dan 'data' didalamnya
 
+#### Contoh:
+	[
+		'header' => [array data header]
+		'data' => [array kiriman data ke element]
+	]
+
 #### Policy
 
 a. hanya data dengan nama field yang ada di array header saja yang boleh ditampilkan 
