@@ -74,7 +74,7 @@ FAQ :
 			]
 	    ],
 	    'page_data' => [
-	            'header'=> ('nama','Umur','alamat')
+	            'header'=> ['nama','Umur','alamat']
 	            'data' => [
 					0 =>  [
 						'nama' => 'mr.x',
