@@ -12,7 +12,7 @@ Contract ini digunakan sebagai format data dalam component.
       |_ component_style
       |_ component_debug
 
-Keterangan :
+Policy :
 
 1. 'component_id' berisi nama unik dari component yang digunakan dan wajib di-isi. Component yang sama dapat digunakan lebih dari satu kali pada halaman yang sama, namun wajib memberikan 'component_id' yang berbeda
 1. Parameter yang dikirimkan kedalam component dikirim menggunakan array dengan parameter 'component_data' dan 'component_style' didalamnya
@@ -23,6 +23,7 @@ Keterangan :
 6. gunakan global component variabel 'component_errors' untuk menampung pesan error jika terjadi kesalahan pemberian data/ketidaksesuaian format data.
 7. jika ada nilai error yang tertamppung pada variabel 'component_errors' tidak menampilkan UI, melainkan pesan error.
 8. set 'component_debug'ke true untuk testing dan developing phase. mode ini akan melakukan validasi parameter dan menampilkan pesan error. Bila sudah dalam statu stable, matikan fitur ini untuk mematikan fitur pengecekan 
+9. component wajib memberikan kemudahan dalam object binding (dengan menggunakan attribut id, class, atau data)
 
 #### Contoh Kiriman Data:
 	[
