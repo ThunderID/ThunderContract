@@ -5,6 +5,7 @@ Contract ini digunakan sebagai format data dalam component.
 ## Contract
 
 #### Struktur Data
+      |_ component_id
       |_ component_data
       |   |_ header
       |   |_ data
@@ -13,6 +14,7 @@ Contract ini digunakan sebagai format data dalam component.
 
 Keterangan :
 
+1. 'component_id' berisi nama unik dari component yang digunakan dan wajib di-isi. Component yang sama dapat digunakan lebih dari satu kali pada halaman yang sama, namun wajib memberikan 'component_id' yang berbeda
 1. Parameter yang dikirimkan kedalam component dikirim menggunakan array dengan parameter 'component_data' dan 'component_style' didalamnya
 2. data dalam variabel 'component_data' digunakan untuk menampung nilai data yang digunakan component
 3. data dalam variabel 'component_style' digunakan untuk menampung nilai data yang digunakan untuk keperluan UI
@@ -24,6 +26,7 @@ Keterangan :
 
 #### Contoh Kiriman Data:
 	[
+		'component_id' => id unik component,
 		'component_data' => [
 			'header' => [array data header]
 			'data' => [array kiriman data ke element (berdasarkan dokumentasi component)]
@@ -40,7 +43,8 @@ b. component harus mampu melakukan penyesuaian berdasarkan data kiriman(header&d
 
 c. pada 'component_style' isi dan format bergantung pada requirement component dan dapat dilihat pada dokumentasi component.
 
-d. penamaan component menggunakan snake case text format
+d. penamaan component ('component_id') menggunakan snake case text format
+
 
 #### Directory
 
@@ -64,6 +68,7 @@ Contoh :
 Format :
 
 	@include('components.NAMA FOLDER COMPONENT.component', [
+		'component_id' => '',
 		'component_data' => [
 			'header' => [],
 			'data' => []
@@ -75,6 +80,7 @@ Format :
 Contoh :
 
 	@include('components.input.component', [
+		'component_id' => 'component_1',
 		'component_data' => [
 				'header' => [],
 				'data' => []
