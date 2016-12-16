@@ -29,3 +29,9 @@ Keterangan:
 1. [Page Create](https://github.com/ThunderID/ThunderContract/blob/master/Backend/create.mdown)
 2. [Page Index](https://github.com/ThunderID/ThunderContract/blob/master/Backend/create.mdown)
 3. [Page Show](https://github.com/ThunderID/ThunderContract/blob/master/Backend/show.mdown)
+
+#### Format Data
+Format data ditentukan oleh api, UI tidak dapat melakukan override data yang diberikan API.
+
+Misal data dari API : 'IDR 10.000' maka user hanya akan dapat menampilkan data tersebut apa adanya yakni 'IDR 10.000'.
+[case](https://github.com/ThunderID/ThunderContract/issues/1)
