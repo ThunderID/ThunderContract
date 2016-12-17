@@ -1,0 +1,18 @@
+#Element
+
+## Contract
+1. [input]()
+
+##Penggunaan element oleh : 
+### API
+penggunaan element dalam API mengikuti contract di atas. Element digunakan API untuk merepresentasikan data sehingga UI dapat merepresentasikan data sesuai dengan yang di harapkan oleh API.
+Misal, data nama ingin direpresentasikan oleh API sebagai input string, maka dengan menggunakan element(mengikuti contract yang ada) UI akan dapat menerjemahkan requirement yang diberikan oleh API.
+
+### Component
+contoh penggunaan element dalam component
+
+    @include('components.input.module.input-string', [
+      "index" => Id Urutan Element, 
+      "name"  => ELement Name,
+      "data" 	=> Data Element(sesuai Contract), 
+      "style" => $style])
