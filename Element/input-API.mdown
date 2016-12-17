@@ -9,22 +9,22 @@ Description : this will generate input with string type
 Data : string value (passed via parameter->value)
 
 Parameter : 
-
- value : input value [string value],
- validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
-   enabled : set this element enabled or disabled (true or false)
+      
+    value : input value [string value],
+    validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
 
 [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
 
 How to Use :
 
- 'element-class'      => 'input',
- 'element-type'       => 'string',
- 'element-properties' =>  [
-  'value'      => value passed to element,
-  'validation' => array of validation ie : ['required' => true],
-       'enabled'    => true or false
- ]
+    'element-class'      => 'input',
+    'element-type'       => 'string',
+    'element-properties' =>  [
+        'value'      => value passed to element,
+        'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false
+     ]  
 
 ####2. input-email
 Description : this will generate input with string type 
