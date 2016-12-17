@@ -1,7 +1,8 @@
 #Element
 
 ## Contract
-1. [input]()
+1. [Input-API](https://github.com/ThunderID/ThunderContract/blob/master/Element/list.mdown)
+2. [Input-UI]()
 
 ##Penggunaan element oleh : 
 ### API
