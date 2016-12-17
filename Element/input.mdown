@@ -1,18 +1,211 @@
-#Element
-
-## Contract
-1. [input]()
-
-##Penggunaan element oleh : 
-### API
-penggunaan element dalam API mengikuti contract di atas. Element digunakan API untuk merepresentasikan data sehingga UI dapat merepresentasikan data sesuai dengan yang di harapkan oleh API.
-Misal, data nama ingin direpresentasikan oleh API sebagai input string, maka dengan menggunakan element(mengikuti contract yang ada) UI akan dapat menerjemahkan requirement yang diberikan oleh API.
-
-### Component
-contoh penggunaan element dalam component
-
-    @include('components.input.module.input-string', [
-      "index" => Id Urutan Element, 
-      "name"  => ELement Name,
-      "data" 	=> Data Element(sesuai Contract), 
-      "style" => $style])
+ ###Element-type
+ This will be set of options of your 'element-type' you can choose  to generate your UI.
+ 
+ ####1. input-string
+ Description : this will generate input with string type 
+ 
+ Data : string value (passed via parameter->value)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
+ 	
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'string',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false
+ 	]
+ 
+ ####2. input-email
+ Description : this will generate input with string type 
+ 
+ Data : string value (passed via parameter->value)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'email',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false
+ 	]
+ 
+ ####3. input-hidden
+ Description : this will generate input hidden type (will not show in UI)
+ 
+ Data : string value (passed via parameter->value)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : NULL (will not validate anything),
+    enabled : set this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'email',
+ 	'element-properties' =>  [
+  		'value'      => value passed to element,
+  		'validation' => null,
+        'enabled'    => true or false
+  	]
+  	
+  ####4. input-disabled
+ Description : this will generate input with disabled style
+ 
+ Data : string value (passed via parameter->value)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : NULL (will not validate anything),
+    enabled : sett this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'email',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => null,
+        'enabled'    => true or false
+ 	]
+ 
+ ####5. input-password
+ Description : this will generate input with password format
+ 
+ Data : None (password will not displayed)
+ 
+ Parameter : 
+ 
+ 	value : NULL
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'password',
+ 	'element-properties' =>  [
+ 		'value'      => null,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false
+ 	]
+ 
+ ####6. input-number
+ Description : this will generate input with number format
+ 
+ Data : number format
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'password',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false
+ 	]
+ 
+ ####7. input-text
+ Description : This will generate input with textarea format
+ 
+ Data : Data on text format. Can be normal String text, or mark up (HTML)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false)
+ 
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'text',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => set this element enabled or disabled (true or false)
+ 	]
+ 	
+ ####8. input-datetime
+ Description : input for datetime
+ 
+ Data : date in specified format (GMT)
+ 
+ Parameter : 
+ 
+ 	value : input value [string value],
+ 	validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+ 	format : see available list below,
+    enabled : set this element enabled or disabled (true or false)
+ 	gmt : 	[
+ 				timezone : string timezone value
+ 				timezone_type : string type of timezone
+ 			] 
+ 			or
+ 			Null for no GMT conversion
+ 	
+ [Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+ 
+ Available date format :
+ 
+ 	dd/mm/yyyy
+ 	mm/dd/yyyy
+ 	yyyy/mm/dd
+ 	dd-mm-yyyy
+ 	mm-dd-yyyy
+ 	yyyy-mm-dd
+ 	hh:mm:ss
+ 	hh:mm
+ 	mm/yyyy
+ 
+ 
+ 
+ How to Use :
+ 
+ 	'element-class'      => 'input',
+ 	'element-type'       => 'text',
+ 	'element-properties' =>  [
+ 		'value'      => value passed to element,
+ 		'validation' => array of validation ie : ['required' => true],
+        'enabled'    => set this element enabled or disabled (true or false)
+ 		'gmt'        => [
+ 							'timezone' => timezone name (WIB, WITA, or WIT),
+ 							'timezone_type' => '2'
+ 					]
+ 	]
