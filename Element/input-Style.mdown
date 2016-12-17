@@ -1,8 +1,8 @@
 #Element
 
 ## Contract
-1. [Input-API](https://github.com/ThunderID/ThunderContract/blob/master/Element/list.mdown)
-2. [Input-UI]()
+1. [Input-API](https://github.com/ThunderID/ThunderContract/blob/master/Element/input-API.mdown)
+2. [Input-Style](https://github.com/ThunderID/ThunderContract/blob/master/Element/input-Style.mdown)
 
 ##Penggunaan element oleh : 
 ### API
