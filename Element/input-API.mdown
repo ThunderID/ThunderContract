@@ -72,7 +72,7 @@ How to Use :
             'enabled'    => true or false
       ]
 
- ####4. input-disabled
+####4. input-disabled
 Description : this will generate input with disabled style
 
 Data : string value (passed via parameter->value)
