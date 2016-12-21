@@ -143,3 +143,20 @@ Keterangan:
 
 1. berikan nilai null pada parameter bila tidak ingin me-override style default element.
 2. NAMA FIELD adalah nilai nama field element.
+
+
+#### 9. input-select
+
+Parameter opsi untuk styling :
+
+	NAMA FIELD => [
+		'label' 		=> label dari input (Tipe data : string),
+		'class' 		=> class yang daat digunakan untuk styling maupun element binding (Tipe data : string),
+		'placeholder' 		=> place holder dari input (Tipe data : string),
+		'default'		=> true or false. Set false bila ingin mematikan behavior & styling default dari element ini(Tipe data : boolean) 
+	]
+
+Keterangan:
+
+1. berikan nilai null pada parameter bila tidak ingin me-override style default element.
+2. NAMA FIELD adalah nilai nama field element.
