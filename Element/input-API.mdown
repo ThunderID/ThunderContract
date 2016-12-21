@@ -211,3 +211,32 @@ How to Use :
                   'timezone_type' => '2'
             ]
       ]
+
+####9. input-select
+Description : this will generate input with select type 
+
+Data : string value (passed via parameter->value) and available selected item (passed via parameter->options)
+
+Parameter : 
+      
+    value : input value [string value],
+    validation : array of validation. ie : ['required' => true, 'min' => 1, 'max' => 10],
+    enabled : set this element enabled or disabled (true or false),
+    options : array of available parameter options with format 'value' => 'Caption'
+
+[Snake Case Format](https://en.wikipedia.org/wiki/Snake_case)
+
+How to Use :
+
+    'element-class'      => 'input',
+    'element-type'       => 'string',
+    'element-properties' =>  [
+        'value'      => value passed to element,
+        'validation' => array of validation ie : ['required' => true],
+        'enabled'    => true or false,
+        'options'    => [
+                              '1' => 'string',
+                              '2' => 'string',
+                              dts....
+                        ]
+     ]  
