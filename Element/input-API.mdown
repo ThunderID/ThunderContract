@@ -229,7 +229,7 @@ Parameter :
 How to Use :
 
     'element-class'      => 'input',
-    'element-type'       => 'style',
+    'element-type'       => 'select',
     'element-properties' =>  [
         'value'      => value passed to element,
         'validation' => array of validation ie : ['required' => true],
